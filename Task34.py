@@ -8,8 +8,7 @@
 Ввод: пара-ра-рам рам-пам-папам па-ра-па-да
 Вывод: Парам пам-пам'''
 def get_sum_vowels(phrase):
-    vowels_letters = [let for let in phrase if let in 'аоуыэеёиюя']
-    return len(vowels_letters)
+    return len([let for let in phrase if let in 'аоуыэеёиюя'])
 
 rhythm = set(map(get_sum_vowels, input('Введите стих: ').lower().split()))
 if len(rhythm) == 1 and 0 not in rhythm:
